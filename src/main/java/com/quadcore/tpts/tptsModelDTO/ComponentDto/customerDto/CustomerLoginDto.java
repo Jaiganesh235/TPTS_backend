@@ -1,0 +1,20 @@
+package com.quadcore.tpts.tptsModelDTO.ComponentDto.customerDto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CustomerLoginDto {
+
+    @NotBlank(message = "Email is required")
+    @Email(message = "Enter a valid email format")
+    private String email;
+
+    @NotBlank(message = "Password is required")
+    private String password;
+}
